@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+<title>Gebs-Gestion des congés</title>
+<style>
+    body{background-color:#4D88FF;margin:0;background-image: url("plan.webp");background-repeat:no-repeat;background-size: cover;}
+    #logo{display:inline-block;}
+    #button{ cursor:pointer;font-weight:bold;vertical-align:top;margin-top:35px;margin-bottom:10px;margin-left:70%;width:140px;height:40px;border-radius: 50px;box-shadow: 5px 5px #4D88FF; border-color: white;animation: anim 3s;animation-iteration-count: infinite}
+   @keyframes anim {
+  from {background-color: #4D88FF;}
+  to {background-color: #8CD6ED;}
+   }
+   #button:hover{
+                 box-shadow:5px 10px 10px rgba(0,0,0,0.5);
+            }
+   #plan{height:10%;width:100%}
+   .login-box {  
+    position: absolute;  
+    display:none;
+    top: 50%;
+    left: 50%;  
+    opacity:80%;
+    width: 400px;
+    padding: 40px;  
+    transform: translate(-50%, -50%);  
+    background: white;  
+    box-sizing: border-box;  
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);  
+    border-radius: 10px;  
+   }  
+   
+   .login-box .user-box {  
+    position: relative;  
+    margin-left:20px;
+   }  
+   .login-box .user-box input {  
+    width: 100%;  
+    padding: 10px 0;  
+    font-size: 16px;  
+    color: black;  
+    margin-bottom: 30px;  
+    border: none;  
+    border-bottom: 1px solid #fff;  
+    outline: none;  
+    background: transparent;  
+   }  
+   .login-box .user-box label {  
+    position: absolute;  
+    top:0;  
+    left: 0;  
+    padding: 10px 0;  
+    font-size: 15px;  
+    color: black;  
+    pointer-events:none;  
+    transition: .5s;  
+   }  
+   .login-box .user-box input:focus ~ label,  
+   .login-box .user-box input:valid ~ label {  
+    top: -20px;  
+    left: 0;  
+    color: #4169E1;  
+    font-size: 17px;  
+   }  
+   
+ #login{ cursor:pointer;width:200px;height:40px;background-color:#1073C0;border:0;border-radius:30px}
+ p{font-size: 25px;font-family:Serif;font-weight:bold ;margin-left:16%;margin-top:0 }
+</style>
+</head>
+<body>
+
+ <div><img id="logo" src="logo.png">
+    <button id="button">Connexion</button>
+</div><br>
+<p>Bienvenue</p>
+<p>pour une gestion des congés simplifiée</p>
+<div class="login-box" >  
+    <form action="/" method="post">
+     <div class="user-box">  
+      <input type="email" name="username" class="input-field" placeholder="E-mail" /> 
+      <label><strong>E-mail</strong></label>  
+     </div>  
+     <div class="user-box">  
+      <input type="password" name="password" class="input-field" placeholder="Mot de passe" />
+      <label><strong>Mot de passe</strong></label>  
+     </div>  
+     
+      
+     <button id="login"><strong>Se connecter</strong></button>
+     
+    </form>  
+   </div>  
+   <script src="accueil.js"></script>
+</body>
+</html>

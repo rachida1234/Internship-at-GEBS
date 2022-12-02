@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <title>Historique congés</title>
+        
+        <style>
+            .gauche{
+                float:left;
+                margin-left:20px;
+            }
+            .icon{ display:inline-block;height:100px ;width:100px;
+              border:none;
+              border-radius: 50px;
+            }
+            .logo{margin-left:0px;vertical-align:top;
+                margin-bottom:70px;
+            }
+            
+            .profil{
+                background-color:white(180, 195, 199);
+                cursor:pointer;
+                margin-top:20px;
+                margin-left:400px;
+                border:none;
+                display:inline-block;
+                border-radius:300px; 
+            }
+            .pdp{
+                margin-left:255px;
+                margin-top:-560px;vertical-align:top;
+                display:inline-block;
+            }
+            .info{height:50px; width:50px;display:inline-block;}
+            body{
+                animation: background 10s;animation-iteration-count: infinite;
+            }
+            #bouton1,#bouton2,#bouton3,#bouton4,#bouton5,#bouton6{
+                cursor:pointer;
+                display:inline-block;
+                border-radius: 50px;
+                border-color: blue;
+                margin-bottom:10px;
+                
+            }
+            #bouton1:hover,#bouton2:hover,#bouton3:hover,#bouton4:hover,#bouton5:hover,#bouton6:hover{
+                box-shadow: 10px 10px 10px rgb(41, 41, 41);
+                
+            }
+            .modifier{
+                margin-bottom:50px;cursor:pointer;text-decoration: underline;color:white;margin-left:370px;
+            }
+            #text1,#text2,#text3,#text4,#text5,#text6{
+                font-style: Arial;
+                font-size:16px;
+                background-color:#1073C0;
+                width:185px;
+                height:40px;
+                padding-left:20px;
+                padding-top:6px;
+                margin-top:10px;
+                border-radius:50px;
+                display:inline-block;
+                color:aliceblue;
+                vertical-align:top;
+                cursor:pointer;
+                transition: background-color 1s;
+            }
+            #text1:hover,#text2:hover,#text3:hover,#text4:hover,#text5:hover,#text6:hover{
+                background-color:white;
+                color:#1073C0;
+
+            }
+            .modifier-profile{
+                grid-template-rows:30px 30px 30px 30px;
+                margin-left:600px;
+                display:none;
+                margin-top:-480px;
+            }
+            .pic{
+                background-color: white;
+                border-color: #1073C0;
+                cursor:pointer;
+                color:black;
+                width: 200px;
+                transition:background-color 1s ;
+            }
+            .pic:hover{
+                background-color: #1073C0;
+                border-color: white;
+                color:white;
+            }
+             #annuler{
+                background-color: white;
+                border-color: #1073C0;
+                cursor:pointer;
+                width: 200px;
+                color:black;
+                transition:background-color 1s ;
+            }
+            #annuler:hover{
+                background-color: #1073C0;
+                border-color: white;
+                color:white;
+            }
+            #boite_message{
+                border-radius: 320px;
+                height:30px;
+                width:75px;
+                border:none;
+                cursor:pointer;
+                margin-top:-174px;
+                margin-left:920px;  vertical-align:top;
+            }
+            #deconnexion{
+                border-radius: 350px;
+                height:30px;
+                width:75px;
+                border:none;
+                cursor:pointer;
+                margin-top:-150px;
+                margin-left:1010px;
+                float:left;
+                vertical-align:top;
+            }
+            #deconnexion:hover{
+                 box-shadow:5px 10px 10px rgba(0,0,0,0.5);
+            }
+            #boite_message:hover{
+                 box-shadow:5px 10px 10px rgba(0,0,0,0.5);
+            }
+            .notification{
+                width:30px;
+                padding-left:0px;
+                height:30px;
+                margin-left:0px;
+                display:inline-block;
+            }
+            .messagerie{
+              vertical-align:top;margin-top:6px;height:50px; width:50px;display:inline-block;
+            }
+           .planning{
+            position: absolute;  
+            margin-top: -430px;
+            margin-left: 500px;  
+            opacity:80%;
+            width: 420px;
+            height:400px;
+            border-color: beige;
+            padding: 40px;   
+            background: rgb(243, 219, 0);  
+            box-sizing: border-box;  
+            box-shadow: 0 15px 25px rgba(0,0,0,.6);  
+            border-radius: 10px;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+           }
+           #titre{
+            padding-left:75px;}
+            .btn{
+                width:265px;
+                margin-bottom:15px;
+                margin-left:45px;
+            }
+            
+            @keyframes background{from{background-color: #1f86f5}to{background-color:#1DC8CD ;}}
+        </style>
+    </head>
+    <body >
+        <div class="gauche"  > 
+            
+                <div><img class="logo" src="logo1.png"></div>
+                
+            <div>
+                <div>
+                    <button id="bouton1"><a href="MesInformations.html">
+                   <img class="info" src="navigateur.png"></a></button>
+                    </button>
+                    <a href="MesInformations.html">
+                   <p id="text1">Mes informations</p></a>
+                   </div>
+                   <div><button id="bouton2">
+                       <a href="Historique.html">
+                       <img class="info" src="historique.png"></a>
+                   </button>
+                   <a href="Historique.html">
+                       <p id="text1"> Historique congés</p></a></div>
+                   <div><button id="bouton3">
+                       <a href="Solde.html">
+                           <img class="info" src="solde.jpg"></a>
+                       </button>
+                       <a href="Solde.html">
+                           <p id="text3">  Solde congés</p></a></div>
+                   <div><button id="bouton4">
+                       <a href="Planning.html">
+                            <img class="info" src="planning.png"></a>
+                           </button>
+                           <a href="Planning.html">
+                           <p id="text4"> Jours fériés</p></a></div>
+                    <div><button id="bouton5">
+                       <a href="Demande.html">
+                         <img class="info" src="article.png">
+                       </a> </button>
+                       <a href="Demande.html">
+                              <p id="text5">  Demande de congés</p></a></div>    
+                   <div><button id="bouton6">
+                       <a href="Type_congés.html">
+                               <img class="info" src="puzzle.png"></a>
+                                  </button>
+                                  <a href="Type_congés.html"><p id="text6">  Types de congés</p></a></div> 
+                        
+                   
+               </div>
+    </div>
+    <div class="pdp">
+        <div ><button class="profil"> <img class="icon" src="profil.png"></button>
+        <p class="modifier"></p></div>
+        <div class="barre">
+            <div><button id="deconnexion"><img class="notification" src="logout.png">
+                </button></div>
+            <br>
+            <div><button id="boite_message">
+                <img class="notification" src="notification.png">
+               </button></div>
+        </div>
+    </div>   
+     
+     <div class="planning">
+           <h1 id="titre">Jours fériés</h1>
+            <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="11 janvier : Manifeste de l'Indépendance du Maroc est un acte grandement symbolique au Maroc, qui consolide et formalise les prises de position nationalistes issues du Manifeste contre le Dahir berbère. Le 11 janvier est officiellement jour férié au Maroc.">Manifeste de l'independance</button> 
+            <button  type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="1 er Mai : un jour férié">Fête du travail </button>
+
+            <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="30 juillet : Cette fête, qui est la plus importante fête civile au Maroc, célèbre le jour de l'intronisation du monarque. Elle avait lieu le 3 mars à l'époque de Hassan II et le 18 novembre à celle de Sidi Mohammed ben Youssef/Mohammed V ; officieusement inaugurée en 1933, sous le règne de ce dernier, par des nationalistes marocains voulant défier les autorités françaises qui gouvernaient le Maroc, elle a été officialisée l'année suivante">Fête du Trône</button> 
+            <button  type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="14 aout : Marque le retour des provinces sahariennes au Maroc.">Oued eddahab</button> 
+
+            <button  type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="20 aout : Il rappelle la déportation du sultan Mohammed V, après sa destitution par les autorités françaises en 1953. Cet événement avait provoqué un sursaut de nationalisme dans la population outrée par ce geste de la puissance occupante. Aujourd'hui on organise des défilés militaires partout dans le Royaume, on lance des feux d'artifice">Révolution du roi et du peuple</button> 
+            <button  type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="21 aout : L'anniversaire du roi Mohammed VI">Fête de la jeunesse </button> 
+            <button  type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="6 novembre : depuis 1975"> Marche verte  </button> 
+            <button  type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="18 novembre : La fin du protectorat de la France sur le Maroc en 19552 (Fête nationale du pays)
+            "> Fête de l'indépendance   </button> 
+            <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="1 er chawal : Marque la fin du ramadan (Deux jours fériés pour les administrations et le secteur privé">AID al FITRE</button> 
+             <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="10 dhou al hijja : Commémore le sacrifice du prophète Abraham (Deux jours fériés pour les administrations et le secteur privé (Décret n° 2-04-426).)
+            "> AID ADHA</button> 
+            <button  type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="10 rabia al awal : Deux jours fériés pour les administrations et le secteur privé (Décret n° 2-04-426).
+            ">AID MAWLID</button>
+            <button  type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="1 er moharam : Un jour férié pour les administrations et le secteur privé
+            ">1er moharam</button> 
+    </div>
+
+
+    </body>
+</html>

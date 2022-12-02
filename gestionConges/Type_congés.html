@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Types congés</title>
+        <style>
+            .gauche{
+                float:left;
+                margin-left:20px;
+            }
+            .icon{ display:inline-block;height:100px ;width:100px;
+              border:none;
+              border-radius: 50px;
+            }
+            .logo{margin-left:0px;vertical-align:top;
+                margin-bottom:70px;
+            }
+            
+            .profil{
+                background-color:white(180, 195, 199);
+                cursor:pointer;
+                margin-top:20px;
+                margin-left:400px;
+                border:none;
+                display:inline-block;
+                border-radius:300px; 
+            }
+            .pdp{
+                margin-left:250px;
+                margin-top:-600px;vertical-align:top;
+                display:inline-block;
+            }
+            .info{height:50px; width:50px;display:inline-block;}
+            body{
+                animation: background 10s;animation-iteration-count: infinite;
+            }
+            #bouton1,#bouton2,#bouton3,#bouton4,#bouton5,#bouton6{
+                cursor:pointer;
+                display:inline-block;
+                border-radius: 50px;
+                border-color: blue;
+                margin-bottom:10px;
+                
+            }
+            #bouton1:hover,#bouton2:hover,#bouton3:hover,#bouton4:hover,#bouton5:hover,#bouton6:hover{
+                box-shadow: 10px 10px 10px rgb(41, 41, 41);
+                
+            }
+            .modifier{
+                margin-bottom:50px;cursor:pointer;text-decoration: underline;color:white;margin-left:370px;
+            }
+            #text1,#text2,#text3,#text4,#text5,#text6{
+                font-style: Arial;
+                font-size:17px;
+                background-color:#1073C0;
+                width:150px;
+                height:30px;
+                padding-left:20px;
+                padding-top:10px;
+                border-radius:50px;
+                display:inline-block;
+                color:aliceblue;
+                vertical-align:top;
+                cursor:pointer;
+                transition: background-color 1s;
+            }
+            #text1:hover,#text2:hover,#text3:hover,#text4:hover,#text5:hover,#text6:hover{
+                background-color:white;
+                color:#1073C0;
+
+            }
+            .modifier-profile{
+                grid-template-rows:30px 30px 30px 30px;
+                margin-left:600px;
+                display:none;
+                margin-top:-480px;
+            }
+            .pic{
+                background-color: white;
+                border-color: #1073C0;
+                cursor:pointer;
+                color:black;
+                width: 200px;
+                transition:background-color 1s ;
+            }
+            .pic:hover{
+                background-color: #1073C0;
+                border-color: white;
+                color:white;
+            }
+            #annuler{
+                background-color: white;
+                border-color: #1073C0;
+                cursor:pointer;
+                width: 200px;
+                color:black;
+                transition:background-color 1s ;
+            }
+            #annuler:hover{
+                background-color: #1073C0;
+                border-color: white;
+                color:white;
+            }
+            #boite_message{
+                border-radius: 320px;
+                height:30px;
+                width:75px;
+                border:none;
+                cursor:pointer;
+                margin-top:-178px;
+                margin-left:900px;  vertical-align:top;
+            }
+            #deconnexion{
+                border-radius: 350px;
+                height:30px;
+                width:75px;
+                border:none;
+                cursor:pointer;
+                margin-top:-160px;
+                margin-left:990px;
+                float:left;
+                vertical-align:top;
+            }
+            #deconnexion:hover{
+                 box-shadow:5px 10px 10px rgba(0,0,0,0.5);
+            }
+            #boite_message:hover{
+                 box-shadow:5px 10px 10px rgba(0,0,0,0.5);
+            }
+            .notification{
+                width:30px;
+                padding-left:0px;
+                height:30px;
+                margin-left:0px;
+                display:inline-block;
+            }
+            .messagerie{
+              vertical-align:top;margin-top:6px;height:50px; width:50px;display:inline-block;
+            }
+            .Demande{  
+            position: absolute;  
+            margin-top: -400px;;
+            margin-left: 500px;;  
+            opacity:80%;
+            width: 400px;
+            padding: 40px;   
+            background: rgb(243, 219, 0);  
+            box-sizing: border-box;  
+            box-shadow: 0 15px 25px rgba(0,0,0,.6);  
+            border-radius: 10px;  
+            } 
+            .bloc{
+                margin-left:0px;
+                height:30px;
+                width:160px;
+                margin-bottom:5px;
+                border:none;
+                border-radius:10px;
+            } 
+            #label1{ margin-right:38px; }
+            #label2{ margin-right:58px; }
+            #label3{ margin-right:73px; }
+            #deposer{width:160px;margin-left:170px;margin-top:-40px;height:40px;border-radius:20px;color:white;border:none;box-shadow:10px 10px 10px gray ;font-weight: bold;cursor:pointer;background-color:#1073C0 ;vertical-align:top;}
+            #delete{width:150px;display:inline-block;margin-left:-10px;margin-top:40px;height:40px;border-radius:20px;color:white;border:none;box-shadow:10px 10px 10px gray ;font-weight: bold;cursor:pointer;background-color:#1073C0 ;vertical-align:top;}
+            #delete:hover{
+                border:none;
+                background-color: white;
+                color:#1073C0;
+            }
+            #deposer:hover{
+                border:none;
+                background-color: white;
+                color:#1073C0;
+            }
+            .Type_conges{
+            float:left;
+            display:grid;
+            place-items:center;
+            position:relative;
+            height:300px;
+            width:460px;
+            left:500px;
+            top:-400px;
+            background:black;
+            border-radius:10px;
+            overflow: hidden;  
+            }
+           
+            .conge_maternite,.conge_maladie,.conge_marriage,.conge_absence,.conge_deces,.conge_naissance,.conge_annuel{
+                color:white;
+                border:none;
+                height:50px;
+                width:200px;
+                margin-bottom:2px;
+                border-radius:20px;
+                background-color: black;
+                margin-left:60px;
+                cursor:pointer;
+                
+            }
+            .conge_maternite:hover,.conge_maladie:hover,.conge_marriage:hover,.conge_absence:hover,.conge_deces:hover,.conge_naissance:hover,.conge_annuel:hover{
+                color:black;
+                border:none;
+                height:50px;
+                width:200px;
+                margin-bottom:2px;
+                border-radius:20px;
+                background-color: white;
+                margin-left:60px;
+                cursor:pointer;
+            }
+            #text_maternite{
+                border-color: #1073C0;
+                margin-top:-50px;
+                background-color: white;
+                padding-top:14px;
+                margin-left:270px;
+                padding-left:30px;
+                border-color: black;
+                width:150px;
+                height:30px;
+                opacity:0.8; display:none;
+                
+            }
+            #text_maladie{
+                border-color: #1073C0;
+                margin-top:-50px;
+                background-color: white;
+                padding-top:14px;
+                margin-left:270px;
+                padding-left:30px;
+                width:150px;
+                height:30px;
+                opacity:0.8; display:none;
+                
+            }
+           #text_marriage{
+            border-color: #1073C0;
+                margin-top:-50px;
+                background-color: white;
+                padding-top:14px;
+                margin-left:270px;
+                padding-left:30px;
+                width:150px;
+                height:30px;
+                opacity:0.8; display:none;
+                
+            }
+           #text_absence{
+            border-color: #1073C0;
+                margin-top:-50px;
+                background-color: white;
+                padding-top:14px;
+                margin-left:270px;
+                padding-left:30px;
+                width:150px;
+                height:30px;
+                opacity:0.8; display:none;
+                
+            }
+            #text_deces{
+                border-color: #1073C0;
+                margin-top:-50px;
+                background-color: white;
+                padding-top:14px;
+                margin-left:270px;
+                padding-left:30px;
+                width:150px;
+                height:30px;
+                opacity:0.8; display:none;
+                
+            }
+           #text_naissance{
+            border-color: #1073C0;
+                margin-top:-50px;
+                background-color: white;
+                padding-top:14px;
+                margin-left:270px;
+                padding-left:30px;
+                width:150px;
+                height:30px;
+                opacity:0.8; display:none;
+                
+            }
+            #text_annuel{
+                border-color: #1073C0;
+                margin-top:-50px;
+                background-color: white;
+                padding-top:14px;
+                margin-left:270px;
+                padding-left:30px;
+                width:150px;
+                height:30px;
+                opacity:0.8;
+                display:none;
+            }
+            .Type{
+            position: absolute;  
+            margin-top: -480px;
+            margin-left: 500px;  
+            opacity:80%;
+            width: 400px;
+            height:470px;
+            border-color: beige;
+            padding: 40px;   
+            background: rgb(243, 219, 0);  
+            box-sizing: border-box;  
+            box-shadow: 0 15px 25px rgba(0,0,0,.6);  
+            border-radius: 10px;
+            }
+            #plus_info{
+                padding-left:30px;
+            }
+            @keyframes background{from{background-color: #1f86f5}to{background-color:#1DC8CD ;}}
+        </style>
+    </head>
+    <body >
+        <div class="gauche"  > 
+             <div><img class="logo" src="logo1.png"></div>
+            <div>
+            <div>
+                    <button id="bouton1"><a href="MesInformations.html">
+                   <img class="info" src="navigateur.png"></a></button>
+                    </button>
+                    <a href="MesInformations.html">
+                   <p id="text1">Mes informations</p></a>
+                   </div>
+                   <div><button id="bouton2">
+                       <a href="Historique.html">
+                       <img class="info" src="historique.png"></a>
+                   </button>
+                   <a href="Historique.html">
+                       <p id="text1"> Historique congés</p></a></div>
+                   <div><button id="bouton3">
+                       <a href="Solde.html">
+                           <img class="info" src="solde.jpg"></a>
+                       </button>
+                       <a href="Solde.html">
+                           <p id="text3">  Solde congés</p></a></div>
+                   <div><button id="bouton4">
+                       <a href="Planning.html">
+                            <img class="info" src="planning.png"></a>
+                           </button>
+                           <a href="Planning.html">
+                           <p id="text4">  Jours fériés </p></a></div>
+                    <div><button id="bouton5">
+                       <a href="Demande.html">
+                         <img class="info" src="article.png">
+                       </a> </button>
+                       <a href="Demande.html">
+                              <p id="text5">  Demande de congés</p></a></div>    
+                   <div><button id="bouton6">
+                       <a href="Type_congés.html">
+                               <img class="info" src="puzzle.png"></a>
+                                  </button>
+                                  <a href="Type_congés.html"><p id="text6">  Types de congés</p></a></div> 
+                        
+                   
+               </div>
+    </div>
+    <div class="pdp">
+        <div ><button class="profil"> <img class="icon" src="profil.png"></button>
+        <p class="modifier"></p></div>
+        <div class="barre">
+            <div><button id="deconnexion"><img class="notification" src="logout.png">
+                </button></div>
+            <br>
+            <div><button id="boite_message">
+                <img class="notification" src="notification.png">
+               </button></div>
+        </div>
+    </div>   
+    
+     <div class="Type">
+        <p id="plus_info"> Cliquer sur un type pour plus d'information :</p>
+        <button class="conge_maternite">Congé de maternité</button> 
+        <p id="text_maternite">90 jours non payés </p>
+        <button class="conge_marriage">Congé de marriage</button> 
+        <p id="text_marriage">4 jours payés </p>
+        <button class="conge_naissance">Naissance </button> 
+        <p id="text_naissance">3 jours payés </p>
+        <button class="conge_deces">Décès</button> 
+        <p id="text_deces">un jour payé </p>
+        <button class="conge_maladie">Congé de maladie </button> 
+        <p id="text_maladie">2 jours non payés </p>
+        <button class="conge_absence">Autorisation d'absence</button> 
+        <p id="text_absence">1/2 jour payé </p>
+        <button class="conge_annuel">Congés annuels  </button> 
+        <p id="text_annuel">18 jours payés </p>
+        
+   </div>
+    
+     <script src="Type_congés.js"></script>
+    </body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profil</title>
+        <style>
+    #form1{float:left;}
+    #form2{margin-left:60%}
+    .info-box {  
+    position: absolute;  
+    display:flex;
+    top: 50%;
+    left: 55%;  
+    opacity:80%;
+    width: 600px;
+    height:97%;
+    padding: 20px;  
+    transform: translate(-50%, -50%);  
+    background: white;  
+    box-sizing: border-box;  
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);  
+    border-radius: 20px;  
+   
+   }  
+   
+   .info-box .user-box {  
+    position: relative;  
+    margin-left:20px;
+   }  
+   .info-box .user-box input {  
+    width: 100%;  
+    padding: 10px 0;  
+    font-size: 16px;  
+    color: black;  
+    margin-bottom: 30px;  
+    border: none;  
+    border-bottom: 1px solid #fff;  
+    outline: none;  
+    background: transparent;  
+   }  
+   .info-box .user-box label {  
+    position: absolute;  
+    top:0;  
+    left: 0;  
+    padding: 10px 0;  
+    font-size: 15px;  
+    color: black;  
+    pointer-events:none;  
+    transition: .5s;  
+   }  
+   .info-box .user-box input:focus ~ label,  
+   .info-box .user-box input:valid ~ label {  
+    top: -20px;  
+    left: 0;  
+    color: #4169E1;  
+    font-size: 17px;  
+   } 
+
+
+
+   .info-box .user-box2 {  
+    position: relative;  
+    margin-left:300px;
+   }  
+   .info-box .user-box2 input,select {  
+    width: 100%;  
+    padding: 10px 0;  
+    font-size: 16px;  
+    color: black;  
+    margin-bottom: 30px;  
+    border: none;  
+    border-bottom: 1px solid #fff;  
+    outline: none;  
+    background: transparent;  
+   }  
+   .info-box .user-box2 label {  
+    position: absolute;  
+    top:0;  
+    left: 0;  
+    padding: 10px 0;  
+    font-size: 15px;  
+    color: black;  
+    pointer-events:none;  
+     
+   }  
+   .info-box .user-box2 input,select:focus ~ label,  
+   .info-box .user-box2 input,select:valid ~ label {  
+    top: -20px;  
+    left: 0;  
+    color: #4169E1;  
+    font-size: 17px;  
+   } 
+   #fam{  position: absolute;  
+    top: -20px;  
+    left: 20px;  
+    color: #4169E1;  
+    font-size: 17px;}
+    #sexe{position: absolute;  
+    top: -20px; 
+    color: #4169E1;  
+    font-size: 17px;}
+    #select{ width:100px;margin-left:20px}
+
+
+   #save{ cursor:pointer;width:200px;height:40px;background-color:#1073C0;border:0;border-radius:30px;margin-left:-105px} 
+          .gauche{
+                float:left;
+                margin-left:20px;
+            }
+            .icon{ display:inline-block;height:100px ;width:100px;
+              border:none;
+              border-radius: 50px;
+            }
+            .logo{margin-left:0px;vertical-align:top;
+                margin-bottom:70px;
+            }
+            
+            .profil{
+                background-color:white(180, 195, 199);
+                cursor:pointer;
+                margin-top:20px;
+                margin-left:400px;
+                border:none;
+                display:inline-block;
+                border-radius:300px; 
+            }
+            .pdp{
+                margin-bottom:0px;
+                margin-left:500px;
+                margin-top:0px;
+                display:inline-block;
+            }
+            .info{height:50px; width:50px;display:inline-block;}
+            body{
+                animation: background 10s;animation-iteration-count: infinite;
+            }
+            .bouton{
+                cursor:pointer;
+                display:inline-block;
+                border-radius: 50px;
+                border-color: blue;
+                margin-bottom:10px;
+                
+            }
+            .bouton:hover{
+                box-shadow: 10px 10px 10px rgb(41, 41, 41);
+                
+            }
+            #bouton1,#bouton2,#bouton3,#bouton4,#bouton5,#bouton6{
+                cursor:pointer;
+                display:inline-block;
+                border-radius: 50px;
+                border-color: blue;
+                margin-bottom:10px;
+                
+            }
+            #bouton1:hover,#bouton2:hover,#bouton3:hover,#bouton4:hover,#bouton5:hover,#bouton6:hover{
+                box-shadow: 10px 10px 10px rgb(41, 41, 41);
+                
+            }
+            .modifier{
+                margin-bottom:50px;cursor:pointer;text-decoration: underline;color:white;margin-left:370px;
+            }
+            #text1,#text2,#text3,#text4,#text5,#text6{
+                font-style: Arial;
+                font-size:17px;
+                background-color:#1073C0;
+                width:150px;
+                height:30px;
+                padding-left:20px;
+                padding-top:10px;
+                border-radius:50px;
+                display:inline-block;
+                color:aliceblue;
+                vertical-align:top;
+                cursor:pointer;
+                transition: background-color 1s;
+            }
+            #text1:hover,#text2:hover,#text3:hover,#text4:hover,#text5:hover,#text6:hover{
+                background-color:white;
+                color:#1073C0;
+
+            }
+            .text{
+                font-style: Arial;
+                font-size:17px;
+                background-color:#1073C0;
+                width:150px;
+                height:30px;
+                padding-left:20px;
+                padding-top:10px;
+                border-radius:50px;
+                display:inline-block;
+                color:aliceblue;
+                vertical-align:top;
+                cursor:pointer;
+            }
+            .pic{
+                background-color: white;
+                border-color: #1073C0;
+                cursor:pointer;
+                color:black;
+                width: 200px;
+                transition:background-color 1s ;
+            }
+            .pic:hover{
+                background-color: #1073C0;
+                border-color: white;
+                color:white;
+            }
+            #annuler{
+                background-color: white;
+                border-color: #1073C0;
+                cursor:pointer;
+                width: 200px;
+                color:black;
+                transition:background-color 1s ;
+            }
+            #annuler:hover{
+                background-color: #1073C0;
+                border-color: white;
+                color:white;
+            }
+            #boite_message{
+                border-radius: 20px;
+                height:30px;
+                width:75px;
+                border:none;
+                cursor:pointer;
+                margin-top:-210px;
+                margin-left:900px;  vertical-align:top;
+            }
+            #boite_message:hover{
+                 box-shadow:5px 10px 10px rgba(0,0,0,0.5);
+            }
+            #deconnexion{
+                border-radius: 20px;
+                height:30px;
+                width:75px;
+                border:none;
+                cursor:pointer;
+                margin-top:-192px;
+                margin-left:990px;
+                float:left;
+                vertical-align:top;
+            }
+            #deconnexion:hover{
+                 box-shadow:5px 10px 10px rgba(0,0,0,0.5);
+            }
+           
+           
+            .notification{
+                width:30px;
+                height:30px;
+                margin-left:0px;
+                display:inline-block;
+            }
+            .messagerie{
+              vertical-align:top;margin-top:6px;height:50px; width:30px;display:inline-block;
+            }
+            @keyframes background{from{background-color: #1f86f5}to{background-color:#1DC8CD ;}}
+        </style>
+    </head>
+    <body >
+        <div class="gauche"  > 
+            
+                <div><img class="logo" src="logo1.png"></div>
+                
+            <div>
+                <div>
+                    <button id="bouton1">
+                       <a href="MesInformations.html">
+                   <img class="info" src="navigateur.png"></a></button>
+                    </button>
+                    <a href="MesInformations.html">
+                   <p id="text1">Mes informations</p></a>
+                   </div>
+                   <div><button id="bouton2">
+                       <a href="Historique.html">
+                       <img class="info" src="historique.png"></a>
+                   </button>
+                   <a href="Historique.html">
+                       <p id="text1"> Historique congés</p></a></div>
+                   <div><button id="bouton3">
+                    <a href="Solde.html">
+                           <img class="info" src="solde.jpg"></a>
+                       </button>
+                       <a href="Solde.html">  <p id="text3">  Solde congés</p></a></div>
+                   <div><button id="bouton4">
+                    <a href="Planning.html">
+                            <img class="info" src="planning.png"></a>
+                           </button>
+                           <a href="Planning.html"> <p id="text4">  Planning congés</p></a></div>
+                    <div><button id="bouton5">
+                       <a href="Demande.html">
+                         <img class="info" src="article.png">
+                       </a> </button>
+                       <a href="Demande.html">
+                              <p id="text5">  Demande de congés</p></a></div>    
+                   <div><button id="bouton6">
+                       <a href="Type_congés.html">
+                               <img class="info" src="puzzle.png"></a>
+                                  </button>
+                                  <a href="Type_congés.html"><p id="text6">  Types de congés</p></a></div> 
+                        
+                   
+               </div>
+    </div>
+    <div class="pdp">
+        <button class="profil"> <img class="icon" src="profil.png"></button></div>
+
+    <div class="info-box" >  
+        <form action="/" method="post">
+            <div id="form1">
+        <div class="user-box">  
+                <input type="text" name="nom" class="input-field" placeholder="Nom" />
+                <label><strong>Nom</strong></label>  
+        </div> 
+        <div class="user-box">  
+            <input type="text" name="prenom" class="input-field" placeholder="Prénom" />
+            <label><strong>Prénom</strong></label>  
+        </div> 
+        <div class="user-box">  
+            <select name="sexe" form="famform">
+                <option value="feminin">Féminin</option>
+                <option value="masculin">Masculin</option>
+                </select>
+                <label id="sexe" for="sexe"><strong>Sexe</strong></label>
+             
+       </div> 
+        <div class="user-box">  
+            <input type="text" name="cin" class="input-field" placeholder="CIN" />
+            <label><strong>CIN</strong></label>  
+        </div> 
+        <div class="user-box">  
+            <input type="number" name="matricule" class="input-field" placeholder="Matricule" />
+            <label><strong>Matricule</strong></label>  
+        </div> 
+        <div class="user-box">  
+            <input type="date" name="datenaiss" class="input-field" placeholder="Date de naissance" />
+            <label><strong>Date de naissance</strong></label>  
+        </div> 
+        <div class="user-box">  
+            <input type="tel" name="telephone" class="input-field" placeholder="Telephone" />
+            <label><strong>Téléphone</strong></label>  
+        </div> 
+       
+         <div class="user-box">  
+           <input type="email" name="username" class="input-field" placeholder="E-mail" /> 
+           <label><strong>E-mail</strong></label>  
+        </div></div>
+        
+         <div class="user-box2">  
+            
+            <select name="fam" id="select" form="famform">
+            <option value="celibataire">Célibataire</option>
+            <option value="marie">Marié(e)</option>
+            </select>
+            <label id="fam" for="fam"><strong>Situation familiale</strong></label>
+        <div>
+        <div class="user-box">  
+                <input type="number" name="nbrEnfants" class="input-field" placeholder="Nombre d'enfants" /> 
+                <label><strong>Nombre d'enfants</strong></label>  
+        </div>
+        <div class="user-box">  
+            <input type="text" name="adresse" class="input-field" placeholder="Adresse" />
+            <label><strong>Adresse</strong></label>  
+        </div> 
+            <div class="user-box">  
+                <input type="date" name="dateEmbauche" class="input-field" placeholder="Date d'embauche" />
+                <label ><strong>Date d'embauche</strong></label>  
+            </div> 
+            <div class="user-box">  
+                <input type="number" name="securiteSociale" class="input-field" placeholder="Num sécurité sociale" />
+                <label><strong>Num sécurité sociale</strong></label>  
+        </div>
+        <div class="user-box">  
+            <input type="number" name="salaireBase" class="input-field" placeholder="Salaire de base" />
+            <label><strong>Salaire de base</strong></label>  
+        </div> 
+        <div class="user-box">  
+            <input type="text" name="typeContrat" class="input-field" placeholder="Type de contrat" />
+            <label><strong>Type de contrat</strong></label>  
+        </div> 
+        <div class="user-box">  
+            <input type="text" name="fonction" class="input-field" placeholder="Fonction" />
+            <label><strong>Fonction</strong></label>  
+        </div>
+          
+
+       
+
+
+         <button id="save"><strong>Enregistrer</strong></button>
+         
+        </form>  
+       </div>  
+
+ 
+
+     <script src="informations.js"></script>
+
+    </body>
+</html>
