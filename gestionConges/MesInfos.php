@@ -4,7 +4,7 @@
 </head>
 <body>
 <?php
-echo "khadija"
+echo "rachida"
 ?>
 </body>
 </html>
