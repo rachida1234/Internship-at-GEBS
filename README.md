@@ -9,6 +9,7 @@ employers.
 
 
 Functions :
+
     1- Displaying all employees’ requests for leave with their type, the requested
     period and the status (approved/rejected or in process).
     
@@ -17,7 +18,12 @@ Functions :
     3- A planning of bank holidays.
 
 Tools used : 
+
     1-Javascript
+    
     2-HTML&CSS
+    
     3-PHP
+    
     4-SQL
+
