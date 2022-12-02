@@ -11,7 +11,9 @@ employers.
 Functions :
     1- Displaying all employees’ requests for leave with their type, the requested
     period and the status (approved/rejected or in process).
+    
     2- Handling the applications for leave management online.
+    
     3- A planning of bank holidays.
 
 Tools used : 
